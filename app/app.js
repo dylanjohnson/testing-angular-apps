@@ -6,5 +6,21 @@
 (function () {
     'use strict';
 
-    angular.module('pizzaShop', []);
+    var app = angular.module('pizzaShop', [
+        'ui.router'
+    ]);
+
+    app.config(function ($urlRouterProvider, $stateProvider) {
+        $urlRouterProvider.otherwise('/home');
+
+        $stateProvider.state('home', {
+            url: '/home',
+            controller: 'homeController',
+            template: '<h1>Hello there</h1>'
+        });
+    });
+
+    app.controller('homeController', function ($scope) {
+
+    });
 }());
