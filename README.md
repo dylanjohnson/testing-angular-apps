@@ -10,6 +10,7 @@ in testing AngularJS applications.
   - install node module dependencies: `npm install`
   - install bower packages: `bower install`
   - install webdriver: `node_modules/protractor/bin/webdriver-manager update`
+  - fire up the server: `node server/server.js`
 
 # Running Tests
 Tests can either be run manually as standalone processes via their node modules, using their individual Grunt tasks, or
