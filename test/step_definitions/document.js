@@ -15,8 +15,9 @@ module.exports = function () {
 
     this.Given(/^I go to the Pizza Shop homepage$/, function (next) {
         browser.get('/');
-        expect(ptor.getCurrentUrl()).to.eventually.match(/\/#/);
-        next();
+        expect(ptor.getCurrentUrl()).to.eventually.match(/\/home/).then(function () {
+            next();
+        });
     });
 
     this.Then(/^the title should be "([^"]*)"$/, function (arg1, callback) {
