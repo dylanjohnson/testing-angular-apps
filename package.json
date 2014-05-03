@@ -1,0 +1,32 @@
+{
+  "name": "testing-angular-apps",
+  "version": "0.0.1",
+  "description": "Examples and documentation on testing AngularJS applications.",
+  "keywords": [
+    "AngularJS",
+    "testing",
+    "protractor",
+    "cucumber"
+  ],
+  "author": {
+    "name": "Dylan Johnson",
+    "email": "therealdylanjohnson@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/dylanjohnson/testing-angular-apps.git"
+  },
+  "dependencies": {
+    "bower": "~1.3.3",
+    "less": "~1.7.0",
+    "protractor": "~0.22.0",
+    "expect.js": "~0.3.1",
+    "chai": "~1.9.1",
+    "chai-as-promised": "~4.1.1",
+    "express": "~4.1.1",
+    "karma": "~0.12.14",
+    "underscore": "~1.6.0",
+    "grunt": "~0.4.4",
+    "cucumber": "~0.4.0"
+  }
+}
