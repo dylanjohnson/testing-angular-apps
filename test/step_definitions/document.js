@@ -20,8 +20,9 @@ module.exports = function () {
         });
     });
 
-    this.Then(/^the title should be "([^"]*)"$/, function (arg1, callback) {
-        // express the regexp above with the code you wish you had
-        callback.pending();
+    this.Then(/^the title should be "([^"]*)"$/, function (titleText, next) {
+        expect(browser.getTitle()).to.eventually.equal(titleText).then(function () {
+            next();
+        });
     });
 };
