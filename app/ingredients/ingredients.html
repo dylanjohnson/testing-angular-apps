@@ -1,0 +1,13 @@
+<div class="well">
+    <h1>Ingredients</h1>
+</div>
+
+<div class="col-xs-12">
+    <ng-switch on="loading">
+        <p ng-switch-when="true">Loading...</p>
+
+        <ul ng-switch-when="false">
+            <li ng-repeat="ingredient in ingredients">{{ ingredient.name }}</li>
+        </ul>
+    </ng-switch>
+</div>

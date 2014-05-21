@@ -13,6 +13,11 @@ Angular and many other JavaScript projects. That link goes to v1.3. There's also
 doesn't exist because I'm scared of change. Quite simply, Jasmine is a way to express what you want to do, and to assert
 that you've done it.
 
+Analogously, think of Jasmine like the *written* half of things like jUnit, phpUnit, rspec, or any other Unit Testing
+Framework in your language of choice. I say "written", because those tools also run their tests. While Jasmine can run
+the tests, just by including them in an HTML page and adding the HTMLReporter (see the Jasmine docs page), most of the
+Angular stuff you'll see defers to Karma (see below) for running Jasmine tests.
+
 Alternatives to Jasmine include Mocha, Chai, Cucumber (aka the best), and various other food- and beverage-named Open
 Source Libraries, to be sure.
 
@@ -25,6 +30,19 @@ tests aren't something I need to see. If you want to use another browser, you sh
 
 It might be mislabelling Karma to call it a "Unit Testing" tool, since it can also run E2E tests (and before Protractor,
 it was used for running angular "scenarios"), but I only use Karma for Unit Testing, so there you are.
+
+# Mocking Server Results
+The most common approach is to use `$httpBackend` like [they do in Phonecat](https://github.com/angular/angular-phonecat/blob/master/test/unit/controllersSpec.js#L21) and declare what
+you want your mocked result to be inline. This has the advantage of keeping unit tests focused on the specific use case.
+
+You can alsowrite some mock implementations of your repositories, like `myApp.service('userRepository')` and
+`myApp.service('userRepositoryMock')`, then flip mocking on or off in a configuration model, as described in this [first
+google result](http://flippinawesome.org/2013/09/09/mocking-server-dependencies-in-javascript-and-angularjs/) for "angularjs mocking server results".
+This is more for enabling work with unfinished or unavailable services, though, instead of testing. And, it would be
+better to use a decorator on repositories that you want to mock, then just comment them in or out, so you can use some
+real services and other mock services.
+
+# Jasmine Spies, or Handling JavaScript Like Interfaces in Classical Languages
 
 # Examples
 

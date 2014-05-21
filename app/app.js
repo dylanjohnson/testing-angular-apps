@@ -3,8 +3,8 @@
  * @author Dylan Johnson <therealdylanjohnson@gmail.com>
  * @copyright Dylan Johnson, 2014
  */
-// (function (angular) {
-    // 'use strict';
+(function (angular) {
+    'use strict';
 
     var app = angular.module('pizzaShop', [
         'ui.router',
@@ -22,11 +22,9 @@
             })
             .state('ingredients', {
                 url: '/ingredients',
-                controller: function ($scope) {
-
-                },
-                template: '<h2>Yo!</h2>'
+                controller: 'ingredientsController',
+                templateUrl: 'ingredients/ingredients.html'
             })
         ;
     });
-//}(angular));
+}(angular));
