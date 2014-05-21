@@ -8,7 +8,10 @@
 
     var app = angular.module('pizzaShop', [
         'ui.router',
-        'templates-app'
+        'templates-app',
+        'ui.bootstrap.tpls',
+        'ui.bootstrap.transition',
+        'ui.bootstrap.modal'
     ]);
 
     app.config(function ($urlRouterProvider, $stateProvider) {

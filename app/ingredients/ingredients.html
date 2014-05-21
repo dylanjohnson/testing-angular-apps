@@ -7,7 +7,7 @@
         <p ng-switch-when="true">Loading...</p>
 
         <ul ng-switch-when="false">
-            <li ng-repeat="ingredient in ingredients">{{ ingredient.name }}</li>
+            <li ng-repeat="ingredient in ingredients" ng-click="clickIngredient(ingredient)" >{{ ingredient.name }}</li>
         </ul>
     </ng-switch>
 </div>

@@ -1,5 +1,5 @@
 (function () {
-    function IngredientsController($scope, ingredientsRepository) {
+    function IngredientsController($scope, ingredientsRepository, $modal) {
         $scope.loading = true;
 
         this.load = function () {
@@ -12,6 +12,15 @@
         };
 
         this.load();
+
+        $scope.clickIngredient = function (ingredient) {
+            $scope.activeIngredient = ingredient;
+
+            $modal.open({
+                scope: this,
+                templateUrl: 'ingredients/active-ingredient-modal.html'
+            });
+        };
     }
 
     angular.module('pizzaShop')
