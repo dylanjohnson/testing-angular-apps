@@ -1,6 +1,6 @@
 var config = {};
 
-config.app_dir = __dirname + '/../app';
+config.app_dir = __dirname + '/../build';
 
 config.port = process.env.NODE_PORT || 3333;
 
