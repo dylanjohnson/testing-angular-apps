@@ -14,7 +14,9 @@ in testing AngularJS applications.
 
 # Running Tests
 Tests can either be run manually as standalone processes via their node modules, using their individual Grunt tasks, or
-all at the same time via the `grunt test` task.
+all at the same time via the `grunt test` task. **TODO:** Actually implement the `grunt test` task.
 
 ## Manually
 **E2E:** from the repo root, run `./node_modules/protractor/bin/protractor ./test/protractor.conf.js`
+**Unit:** from the repo root, run `grunt build` to compile the karma configuration template, start the karma server via
+`./node_modules/karma/bin/karma start build/karma-unit.js` and run with `./node_modules/karma/bin/karma run build/karma-unit.js`
