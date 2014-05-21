@@ -8,7 +8,8 @@ APIs. It uses Jasmine for assertions, so you should be comfortable writing usefu
 [Postman](https://chrome.google.com/webstore/detail/postman-rest-client/fdmmgilgnpjigdojojpjoooidkmcomcm?hl=en) is a
 useful Chrome extension that allows for import/exportable environments and collections out of the box. For something
 like $10, you can get an upgrade to automated testing. There's also a CLI runner called Newman that I haven't yet had a
-chance to explore, but it sounds pretty cool.
+chance to explore, but it sounds pretty cool. There's a [sample collection](postman-collections/stackoverflow.json) with
+a couple Stack Overflow API requests to get you started.
 
 ## SOAP UI
 Well-established, lots of useful tuts on YouTube and other internets. Allows for executing groups of requests like
